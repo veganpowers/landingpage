@@ -1,0 +1,346 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* --- TAMBAHKAN KODE INI DI BAGIAN ATAS CSS --- */
+
+/* Pengaturan Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+  /* Memberi jarak agar saat scroll, konten tidak tertutup navbar */
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  overflow-x: hidden;
+  /* Memberi jarak awal karena navbar kita fixed (melayang) */
+  padding-top: 70px;
+}
+
+/* Styling Navbar Fixed */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Bayangan lembut */
+  z-index: 1000;
+  /* Pastikan selalu berada di paling atas */
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.logo span {
+  color: #007bff;
+  /* Memberi aksen warna pada logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  /* Jarak antar menu */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* --- KODE LAMA KAMU TETAP DI BAWAH SINI --- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Headers */
+.section-header {
+  font-size: 1.2rem;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sub-header {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Row Styling */
+.row {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ROW 1: Hero Section */
+.hero {
+  background-color: #ffffff;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ROW 2: Testimonials Marquee */
+.testimonials {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+.testimonials .section-header {
+  color: #4da3ff;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  /* Animasi berjalan dari kiri ke kanan */
+  animation: scroll-left 20s linear infinite;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px 35px;
+  margin: 0 15px;
+  border-radius: 12px;
+  white-space: nowrap;
+  font-size: 1rem;
+  border-left: 4px solid #007bff;
+}
+
+/* Keyframes untuk efek jalan dari kiri ke kanan */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ROW 3: Pricing */
+.pricing {
+  background-color: #f4f7f6;
+}
+
+.sub-row {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 40px 0;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style: none;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.card ul li {
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.card ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+}
+
+.card button {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Premium Card (Highlight) */
+.card.premium {
+  border: 2px solid #007bff;
+  background-color: #fcfcfc;
+  transform: scale(1.05);
+}
+
+.card.premium:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.card.premium .badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007bff;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.card.premium button {
+  background-color: #007bff;
+  color: white;
+}
+
+.card.premium button:hover {
+  background-color: #0056b3;
+}
+
+/* Efek Muncul dari Bawah (Parallax Scroll Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsivitas Layar Kecil */
+@media (max-width: 768px) {
+  .card.premium {
+    transform: scale(1);
+  }
+
+  .card.premium:hover {
+    transform: translateY(-8px);
+  }
+}
